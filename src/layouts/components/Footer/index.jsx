@@ -74,34 +74,61 @@ function Footer() {
         {/* COL 3 */}
         <div className={styles.col}>
           <h4>Products</h4>
+
           <NavLink
-            to="/products/man"
+            to="/products/men"
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
-            Man
+            Men
           </NavLink>
+
           <NavLink
-            to="/products/woman"
+            to="/products/women"
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
-            Woman
+            Women
           </NavLink>
         </div>
 
-        {/* COL 4 */}
+        {/* COL 4 Lookbook */}
         <div className={styles.col}>
           <h4>Lookbook</h4>
           <NavLink
-            to="/look-book"
+            to="/look-book/look-book01"
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
-            Model
+            ONYX VER1
+          </NavLink>
+          <NavLink
+            to="/look-book/look-book02"
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            ONYX VER2
+          </NavLink>
+
+          <NavLink
+            to="/look-book/look-book03"
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            ONYX VER3
+          </NavLink>
+          <NavLink
+            to="/look-book/look-book04"
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            ADAPT Seamless
           </NavLink>
         </div>
 

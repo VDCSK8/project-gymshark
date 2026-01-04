@@ -1,4 +1,5 @@
 import LogoGymShark from "../../../assets/Logo/Logo.svg";
+// import styles from "./Logo.module.scss";
 function Logo() {
   return (
     <div>
