@@ -1,1 +1,12 @@
- 
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .LogoGymShark {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .LogoGymShark {
+    width: 140px;
+  }
+}

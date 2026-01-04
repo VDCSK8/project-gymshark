@@ -8,30 +8,37 @@ import Contact from "../../pages/Contact";
 import ProductMen from "../../pages/Products/productMen";
 import ProductWomen from "../../pages/Products/productWomen";
 
-import LookBook01 from "../../pages/LookBook/LookBook01";
-import LookBook02 from "../../pages/LookBook/LookBook02";
-import LookBook03 from "../../pages/LookBook/LookBook03";
-import LookBook04 from "../../pages/LookBook/LookBook04";
+import LookBook01 from "../../pages/LookBook/Book01";
+import LookBook02 from "../../pages/LookBook/Book02";
+import LookBook03 from "../../pages/LookBook/Book03";
+import LookBook04 from "../../pages/LookBook/Book04";
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route element={<DefaultLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/brands" element={<Brands />} />
+        <Route index element={<Home />} />
+        <Route path="brands" element={<Brands />} />
 
-        {/* REAL product pages */}
-        <Route path="/products/men" element={<ProductMen />} />
-        <Route path="/products/women" element={<ProductWomen />} />
+        {/* PRODUCTS */}
+        <Route path="products">
+          <Route path="men" element={<ProductMen />} />
+          <Route path="women" element={<ProductWomen />} />
+        </Route>
 
         {/* LOOK BOOK */}
-        <Route path="/look-book/look-book01" element={<LookBook01 />} />
-        <Route path="/look-book/look-book02" element={<LookBook02 />} />
-        <Route path="/look-book/look-book03" element={<LookBook03 />} />
-        <Route path="/look-book/look-book04" element={<LookBook04 />} />
+        <Route path="look-book">
+          <Route path="book01" element={<LookBook01 />} />
+          <Route path="book02" element={<LookBook02 />} />
+          <Route path="book03" element={<LookBook03 />} />
+          <Route path="book04" element={<LookBook04 />} />
+        </Route>
 
-        <Route path="/contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>
   );
 }
+
+
+ 

@@ -1,4 +1,4 @@
-export default function LookBook02() {
+export default function LookBook01() {
   return (
     <div>
       <h1>LookBook01</h1>

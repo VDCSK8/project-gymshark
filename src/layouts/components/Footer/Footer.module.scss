@@ -1,61 +1,35 @@
+/* ========== FOOTER ========== */
 .footer {
   background: #f5f5f5;
-  padding: 80px 60px 40px;
+  padding: 80px 0 40px; /* ❗ không có padding ngang */
 }
 
+/* ========== CONTAINER (same as header) ========== */
 .container {
-  max-width: 1300px;
-  padding: 0 24px;
-  margin: auto;
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr; /* giữ tỉ lệ */
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
   gap: 80px;
-
-  /* Co nhỏ theo viewport */
-  min-width: 0; /* cho phép các cột co */
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .footer {
-    padding: 60px 40px 30px;
-  }
-  .container {
-    gap: 60px;
-  }
-  .brand .desc {
-    max-width: 400px;
-  }
-  .link {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu {
-    flex-wrap: wrap; /* cho phép xuống dòng */
-    gap: 14px 20px; /* 14px giữa các item cùng hàng, 20px giữa hàng */
-  }
-  .footer {
-    padding: 40px 20px 20px;
-  }
-  .container {
-    gap: 40px;
-  } /* co gap thôi, ko thay số cột */
-  .brand .desc {
-    font-size: 10px;
-    max-width: 300px;
-  }
-  .link {
+/* ========== BRAND ========== */
+.brand {
+  .desc {
     font-size: 14px;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 505px;
+    margin: 24px 0;
   }
 }
 
-//  socials icon col 1
+/* ========== SOCIALS ========== */
 .socials {
   display: flex;
   gap: 16px;
-  margin-top: 24px;
 }
 
 .socials a {
@@ -82,46 +56,17 @@
   filter: invert(1);
 }
 
-/* BRAND */
-.brand {
-  h2 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 42px;
-    letter-spacing: 3px;
-    margin-bottom: 24px;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 18px;
-  }
-
-  span {
-    font-weight: 600;
-    font-size: 14px;
-  }
-
-  .desc {
-    font-family: "Roboto", sans-serif;
-    width: 100%; /* Thay vì 505px cố định */
-    max-width: 505px; /* Giữ đẹp trên desktop */
-  }
-}
-
-/* COL */
+/* ========== COL ========== */
 .col {
-  margin-top: 10px;
+  margin-top: 5px;
   h4 {
     font-size: 14px;
-    letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
 }
 
-/* LINK (same logic as header) */
+/* ========== LINK ========== */
 .link {
   display: block;
   margin-bottom: 14px;
@@ -129,38 +74,27 @@
   color: rgba(0, 0, 0, 0.55);
   text-decoration: none;
   transition: 0.25s;
-  position: relative;
-
-  &:hover {
-    color: #000;
-  }
 }
 
+.link:hover {
+  color: #000;
+}
+
+/* ===== ACTIVE NAVLINK ===== */
 .active {
   color: #000;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 20px;
-    height: 2px;
-    background: #000;
-  }
+  position: relative;
 }
 
-.contactTitle {
-  margin-top: 32px;
-}
-
-.col p {
+/* ========== CONTACT ========== */
+.contactItem {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
 }
 
-/* BOTTOM */
+/* ========== BOTTOM ========== */
 .bottom {
   margin-top: 60px;
   padding-top: 24px;
@@ -168,4 +102,24 @@
   text-align: center;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 0 30px;
+  }
+  .container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+  .container {
+    gap: 40px;
+    // grid-template-columns: 1fr 1fr;
+  }
 }

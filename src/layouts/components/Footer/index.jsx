@@ -22,7 +22,7 @@ function Footer() {
             train confidently, and perform at your best. This is more than
             activewear. This is a lifestyle.
           </p>
-          {/* icon */}
+
           <div className={styles.socials}>
             <a
               href="https://www.facebook.com/Gymshark"
@@ -31,7 +31,6 @@ function Footer() {
             >
               <img src={Facebook} alt="Facebook" />
             </a>
-
             <a
               href="https://www.instagram.com/gymshark/"
               target="_blank"
@@ -39,7 +38,6 @@ function Footer() {
             >
               <img src={Instagram} alt="Instagram" />
             </a>
-
             <a
               href="https://www.tiktok.com/@gymshark"
               target="_blank"
@@ -47,7 +45,6 @@ function Footer() {
             >
               <img src={Tiktok} alt="Tiktok" />
             </a>
-
             <a
               href="https://www.youtube.com/@gymshark"
               target="_blank"
@@ -74,7 +71,6 @@ function Footer() {
         {/* COL 3 */}
         <div className={styles.col}>
           <h4>Products</h4>
-
           <NavLink
             to="/products/men"
             className={({ isActive }) =>
@@ -83,7 +79,6 @@ function Footer() {
           >
             Men
           </NavLink>
-
           <NavLink
             to="/products/women"
             className={({ isActive }) =>
@@ -94,11 +89,11 @@ function Footer() {
           </NavLink>
         </div>
 
-        {/* COL 4 Lookbook */}
+        {/* COL 4 */}
         <div className={styles.col}>
           <h4>Lookbook</h4>
           <NavLink
-            to="/look-book/look-book01"
+            to="/look-book/book01"
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
@@ -106,16 +101,15 @@ function Footer() {
             ONYX VER1
           </NavLink>
           <NavLink
-            to="/look-book/look-book02"
+            to="/look-book/book02"
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
             ONYX VER2
           </NavLink>
-
           <NavLink
-            to="/look-book/look-book03"
+            to="/look-book/book03"
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
@@ -123,7 +117,7 @@ function Footer() {
             ONYX VER3
           </NavLink>
           <NavLink
-            to="/look-book/look-book04"
+            to="/look-book/book04"
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
@@ -135,13 +129,10 @@ function Footer() {
         {/* COL 5 */}
         <div className={styles.col}>
           <h4>Contact</h4>
-
           <p className={styles.contactItem}>USA – Washington DC</p>
-
           <a href="tel:123456789" className={styles.link}>
             1234-56789
           </a>
-
           <a href="mailto:fitmakerrr@gmail.com" className={styles.link}>
             Fitmakerrr@gmail.com
           </a>

@@ -3,86 +3,82 @@ import Logo from "../Logo";
 import styles from "./Header.module.scss";
 
 export default function Header() {
-  // match mọi route con của products và look-book
   const isProducts = useMatch("/products/*");
   const isLookBook = useMatch("/look-book/*");
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
-        <NavLink to="/" className={styles.logo}>
-          <Logo />
-        </NavLink>
-
-        <div className={styles.menu}>
-          {/* HOME */}
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              isActive ? `${styles.link} ${styles.active}` : styles.link
-            }
-          >
-            Home
+      <div className={styles.container}>
+        <nav className={styles.nav}>
+          {/* LOGO */}
+          <NavLink to="/" className={styles.logo}>
+            <Logo />
           </NavLink>
 
-          {/* BRANDS */}
-          <NavLink
-            to="/brands"
-            className={({ isActive }) =>
-              isActive ? `${styles.link} ${styles.active}` : styles.link
-            }
-          >
-            Brands
-          </NavLink>
-
-          {/* PRODUCTS */}
-          <div className={styles.dropdown}>
+          {/* MENU */}
+          <div className={styles.menu}>
             <NavLink
-              to="/products/men"
-              onClick={(e) => e.preventDefault()}
-              className={`${styles.link} ${isProducts ? styles.active : ""}`}
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
             >
-              Products
+              Home
             </NavLink>
 
-            <div className={styles.dropdownMenu}>
-              <h4 className={styles.headingDropdownMenu}>Collection</h4>
-              <NavLink to="/products/men">Men</NavLink>
-              <NavLink to="/products/women">Women</NavLink>
-            </div>
-          </div>
-
-          {/* LOOKBOOK */}
-          <div className={styles.dropdown}>
             <NavLink
-              to="/look-book/look-book01"
-              onClick={(e) => e.preventDefault()}
-              className={`${styles.link} ${isLookBook ? styles.active : ""}`}
+              to="/brands"
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
             >
-              LookBook
+              Brands
             </NavLink>
 
-            <div className={styles.dropdownMenu}>
-              <h4 className={styles.headingDropdownMenu}>Collection</h4>
-              <NavLink to="/look-book/look-book01">ONYX VER1</NavLink>
-              <NavLink to="/look-book/look-book02">ONYX VER2</NavLink>
-              <NavLink to="/look-book/look-book03">ONYX VER3</NavLink>
-              <NavLink to="/look-book/look-book04">ADAPT Seamless</NavLink>
-            </div>
-          </div>
+            {/* PRODUCTS */}
+            <div className={styles.dropdown}>
+              <span
+                className={`${styles.link} ${isProducts ? styles.active : ""}`}
+              >
+                Products
+              </span>
 
-          {/* CONTACT */}
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? `${styles.link} ${styles.active}` : styles.link
-            }
-          >
-            Contact
-          </NavLink>
-        </div>
-      </nav>
+              <div className={styles.dropdownMenu}>
+                <h4 className={styles.headingDropdownMenu}>Collection</h4>
+                <NavLink to="/products/men">Men</NavLink>
+                <NavLink to="/products/women">Women</NavLink>
+              </div>
+            </div>
+
+            {/* LOOKBOOK */}
+            <div className={styles.dropdown}>
+              <span
+                className={`${styles.link} ${isLookBook ? styles.active : ""}`}
+              >
+                LookBook
+              </span>
+
+              <div className={styles.dropdownMenu}>
+                <h4 className={styles.headingDropdownMenu}>Collection</h4>
+                <NavLink to="/look-book/book01">ONYX VER1</NavLink>
+                <NavLink to="/look-book/book02">ONYX VER2</NavLink>
+                <NavLink to="/look-book/book03">ONYX VER3</NavLink>
+                <NavLink to="/look-book/book04">ADAPT Seamless</NavLink>
+              </div>
+            </div>
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
+            >
+              Contact
+            </NavLink>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }
