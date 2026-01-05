@@ -1,0 +1,177 @@
+/* ============ CONTAINER ============ */
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* đảm bảo container có chiều cao full màn hình */
+
+  .heroImage {
+    position: absolute; /* chồng các ảnh lên nhau */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0; /* ẩn ảnh mặc định */
+    transition: opacity 2s ease-in-out; /* fade + zoom */
+    z-index: 0;
+    transform: scale(1);
+  }
+
+  .heroImage.active {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+.heroContent {
+  position: absolute; /* đặt lên trên ảnh */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* màu chữ nổi trên ảnh */
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+
+  .heroTitle {
+    font-size: clamp(30px, 5vw, 50px); /* responsive */
+    font-weight: 600;
+    max-width: 460px;
+    line-height: 1.2;
+    margin: 0 auto 20px;
+  }
+}
+
+// why gym shark
+.whyGymShark {
+  margin-top: 50px;
+  position: relative;
+  padding: 50px 0 150px 0;
+  background: #f5f5f5;
+  margin-bottom: 50px;
+
+  .whyContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 400px;
+    position: relative;
+  }
+
+  .whyImage {
+    position: relative;
+
+    .whyGymShark_2 {
+      position: absolute;
+      bottom: -82px;
+      left: 239px;
+    }
+  }
+}
+
+.whyContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+
+  .title {
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 50px;
+    font-size: clamp(36px, 5vw, 60px); /* co giãn theo màn hình */
+    font-weight: 600;
+  }
+
+  .list {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    line-height: 35px;
+
+    li {
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 10px;
+      font-size: clamp(18px, 2.5vw, 30px); /* co giãn responsive */
+    }
+  }
+
+  .buttonWatch {
+    font-family: "Bebas Neue", sans-serif;
+    width: 299px;
+    height: 72px;
+
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #888888;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 44px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #555555;
+    }
+  }
+}
+
+// Featured Products
+.featuredProducts {
+  margin-bottom: 50px;
+  background: #f5f5f5;
+  padding: 50px 0 50px 0;
+  .featuredProductsWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .featuredProductItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 450px;
+      display: block;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 24px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(16px, 2vw, 22px);
+      font-weight: 600;
+      color: #fff;
+      background-color: #888888;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 200px; /* cố định hoặc tùy ý */
+
+      &:hover {
+        background-color: #555555;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

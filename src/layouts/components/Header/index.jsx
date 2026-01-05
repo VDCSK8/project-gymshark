@@ -46,8 +46,15 @@ export default function Header() {
 
               <div className={styles.dropdownMenu}>
                 <h4 className={styles.headingDropdownMenu}>Collection</h4>
-                <NavLink to="/products/men">Men</NavLink>
-                <NavLink to="/products/women">Women</NavLink>
+                <NavLink to="/products/men" className={styles.rowDropdownMenu}>
+                  Men
+                </NavLink>
+                <NavLink
+                  to="/products/women"
+                  className={styles.rowDropdownMenu}
+                >
+                  Women
+                </NavLink>
               </div>
             </div>
 
@@ -61,10 +68,30 @@ export default function Header() {
 
               <div className={styles.dropdownMenu}>
                 <h4 className={styles.headingDropdownMenu}>Collection</h4>
-                <NavLink to="/look-book/book01">ONYX VER1</NavLink>
-                <NavLink to="/look-book/book02">ONYX VER2</NavLink>
-                <NavLink to="/look-book/book03">ONYX VER3</NavLink>
-                <NavLink to="/look-book/book04">ADAPT Seamless</NavLink>
+                <NavLink
+                  to="/look-book/book01"
+                  className={styles.rowDropdownMenu}
+                >
+                  ONYX VER1
+                </NavLink>
+                <NavLink
+                  to="/look-book/book02"
+                  className={styles.rowDropdownMenu}
+                >
+                  ONYX VER2
+                </NavLink>
+                <NavLink
+                  to="/look-book/book03"
+                  className={styles.rowDropdownMenu}
+                >
+                  ONYX VER3
+                </NavLink>
+                <NavLink
+                  to="/look-book/book04"
+                  className={styles.rowDropdownMenu}
+                >
+                  ADAPT Seamless
+                </NavLink>
               </div>
             </div>
 

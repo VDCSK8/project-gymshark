@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .main {
-  flex: 1; // đẩy footer xuống đáy
-  padding-top: 99px; // chiều cao header fixed
+  padding-top: 75px;
 }

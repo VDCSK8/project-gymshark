@@ -106,9 +106,6 @@ section {
   display: block;
 }
 body {
-  /* fix tạm */
-  padding-top: 99px;
-  line-height: 1;
   font-family: "Bebas Neue", sans-serif;
 }
 html,
@@ -136,3 +133,5 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
