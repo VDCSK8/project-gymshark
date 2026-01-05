@@ -96,7 +96,9 @@
     line-height: 35px;
 
     li {
-      font-family: "Roboto", sans-serif;
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      font-style: normal;
       margin-bottom: 10px;
       font-size: clamp(18px, 2.5vw, 30px); /* co giãn responsive */
     }

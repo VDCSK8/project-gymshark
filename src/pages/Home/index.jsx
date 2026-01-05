@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import GoToTop from "../../components/GoToTop";
 import styles from "./Home.module.scss";
 
 import Banner1 from "../../assets/img/Banner1.png";
@@ -105,6 +106,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <GoToTop />
     </div>
   );
 }
