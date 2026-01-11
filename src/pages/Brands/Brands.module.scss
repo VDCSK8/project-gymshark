@@ -88,6 +88,10 @@
     object-fit: contain;
     flex-shrink: 0;
   }
+
+  .featureText {
+    font-family: "Inter", sans-serif;
+  }
 }
 
 /* TEXT */
@@ -104,5 +108,118 @@
     font-size: 20px;
     font-family: "Inter", sans-serif;
     max-width: 645px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .brandsContent {
+    width: 100%;
+    text-align: center;
+
+    .brandsTitle {
+      font-size: 48px;
+    }
+
+    .brandsDesc {
+      max-width: 100%;
+    }
+  }
+
+  /* center hình */
+  .brandsImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ITEM  2 */
+  .brandsItem2 .container {
+    flex-direction: column-reverse;
+    gap: 48px;
+  }
+  .brandsItem2 .brandsImage {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brandsItem2 .imgMain {
+    width: 50%;
+  }
+
+  .brandsItem2 .imgOverlay {
+    display: none;
+  }
+
+  .brandsItem2 .imgCard {
+    display: none;
+  }
+
+  /* item 3 */
+  .brandsItem3 .brandsFeatures {
+    grid-template-columns: repeat(2, max-content); /* giữ 2 cột */
+    justify-content: center; /* căn cả grid vào giữa */
+    gap: 24px 48px;
+    .imgMain {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .brandsContent {
+    width: 100%;
+    text-align: center;
+
+    .brandsTitle {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+
+    .brandsDesc {
+      font-size: 16px;
+    }
+  }
+
+  /* Ảnh full width */
+  .brandsImage img {
+    display: none;
+  }
+
+  /* ITEM 2 stack images */
+  .brandsItem2 .imgMain {
+    width: 90%;
+  }
+
+  .brandsItem2 .imgOverlay {
+    width: 70%;
+    right: -10px;
+    bottom: -20px;
+  }
+
+  .brandsItem2 .imgCard {
+    width: 50%;
+    left: -10px;
+    top: -10px;
+  }
+
+  /* ITEM 3 feature list */
+  .brandsItem3 .brandsFeatures {
+    grid-template-columns: repeat(2, max-content); /* giữ 2 cột */
+    justify-content: center; /* căn cả grid vào giữa */
+    gap: 24px 48px;
+  }
+
+  .brandsItem3 .featureItem {
+    font-size: 16px;
   }
 }

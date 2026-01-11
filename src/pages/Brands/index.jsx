@@ -1,3 +1,4 @@
+import GoToTop from "../../components/GoToTop";
 import styles from "./Brands.module.scss";
 import Brand1 from "../../assets/img/Brand1.png";
 import Brand21 from "../../assets/img/Brand2.1.png";
@@ -111,6 +112,7 @@ function Brands() {
           </div>
         </div>
       </div>
+      <GoToTop />
     </div>
   );
 }
