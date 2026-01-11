@@ -1,0 +1,108 @@
+/* Container   */
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Wrapper */
+.brands {
+  background: white; // nền chung là trắng
+  padding-bottom: 50px;
+}
+
+//======================== ITEM 1
+.brandsItem1 {
+  background: #f5f5f5;
+  padding: 80px 0;
+  margin-bottom: 50px;
+  .brandsItem1:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//===================== ITEM2
+.brandsItem2 {
+  background: #f5f5f5;
+  padding: 80px 0 120px 0;
+  margin-bottom: 50px;
+
+  .brandsImage {
+    position: relative;
+    object-fit: cover;
+
+    /* Brand21   */
+    .imgMain {
+      object-fit: cover;
+      border-radius: 14px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Brand22   */
+    .imgOverlay {
+      position: absolute;
+      bottom: -54px;
+      right: -77px;
+      border-radius: 14px;
+      z-index: 3;
+    }
+
+    /* Card   */
+    .imgCard {
+      position: absolute;
+      top: -24px;
+      left: -65px;
+      z-index: 1;
+    }
+  }
+}
+
+//  ITEM 3
+.brandsItem3 {
+  background: #f5f5f5;
+  padding: 80px 0;
+  .brandsFeatures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 48px;
+    margin-top: 32px;
+  }
+
+  .featureItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+  }
+
+  /* Ô vuông chứa icon */
+  .checkIcon {
+    border-radius: 6px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+}
+
+/* TEXT */
+.brandsContent {
+  width: 50%;
+
+  .brandsTitle {
+    font-size: 66px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+
+  .brandsDesc {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    max-width: 645px;
+  }
+}

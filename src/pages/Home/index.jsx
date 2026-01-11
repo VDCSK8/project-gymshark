@@ -31,7 +31,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % banners.length);
-    }, 4500); // 4.5 giây đổi ảnh
+    }, 4000);
     return () => clearInterval(interval);
   }, [banners.length]);
 
@@ -72,10 +72,10 @@ function Home() {
             <div className={styles.whyContent}>
               <h2 className={styles.title}>WHY GYMSHARK?</h2>
               <ul className={styles.list}>
-                <li>Cho người tập gym</li>
-                <li>Tối ưu hiệu suất</li>
-                <li>Thoáng khí, Linh hoạt</li>
-                <li>Tin dùng toàn cầu</li>
+                <li>For gym-goers</li>
+                <li>Optimal performance</li>
+                <li>Breathable and flexible</li>
+                <li>Trusted globally</li>
               </ul>
               <button className={styles.buttonWatch} onClick={handleClick}>
                 WATCH NOW
