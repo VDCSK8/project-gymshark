@@ -1,7 +1,37 @@
+import styles from "./LookBook.module.scss";
+
+import LookBook04Img1 from "../../assets/img/LookBook04Img1.png";
+import LookBook04Img2 from "../../assets/img/LookBook04Img2.png";
+import LookBook04Img3 from "../../assets/img/LookBook04Img3.png";
+import LookBook04Img4 from "../../assets/img/LookBook04Img4.png";
+
+import GoToTop from "../../components/GoToTop";
 export default function LookBook04() {
   return (
-    <div>
-      <h1>LookBook04</h1>
-    </div>
+    <main className={styles.LookBook}>
+      <div className={styles.container}>
+        <div className={styles.LookBook__content}>
+          <h2 className={styles.LookBook__title}>ADAPT CAMO SEAMLESS</h2>
+          <h3 className={styles.LookBook__subtitle}>
+            Maximise the physique you’ve earned
+          </h3>
+          <p className={styles.LookBook__desc}>
+            Ôm sát cơ thể, tăng độ nổi khối cơ bắp và cảm giác chắc chắn khi tập
+            nặng. Hệ panel thông minh giúp nhấn mạnh vai – ngực – lưng, tạo dáng
+            chữ V rõ nét. Co giãn đa chiều, thoát mồ hôi nhanh, duy trì form áo
+            dù tập cường độ cao. Thiết kế dành riêng cho các buổi tập nặng,
+            compound lift và bodybuilding.
+          </p>
+        </div>
+
+        <div className={styles.LookBook__gallery}>
+          <img className={styles.LookBook__img} src={LookBook04Img1} alt="" />
+          <img className={styles.LookBook__img} src={LookBook04Img2} alt="" />
+          <img className={styles.LookBook__img} src={LookBook04Img3} alt="" />
+          <img className={styles.LookBook__img} src={LookBook04Img4} alt="" />
+        </div>
+      </div>
+      <GoToTop />
+    </main>
   );
 }
