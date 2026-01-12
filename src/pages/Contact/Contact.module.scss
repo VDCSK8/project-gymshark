@@ -1,0 +1,100 @@
+.contact {
+  padding: 80px 0;
+  background: #888888;
+}
+
+/* Layout chuẩn bạn yêu cầu */
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.contact__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact__subtitle {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ===== SUPPORT SECTION ===== */
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.support__intro {
+  text-align: center;
+}
+
+.support__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.support__subtitle {
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Grid list */
+.support__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.support__item {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+
+  &:hover {
+    background: #000;
+    color: #fff;
+
+    .support__link {
+      color: #fff;
+    }
+  }
+}
+
+.support__itemTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.support__link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
