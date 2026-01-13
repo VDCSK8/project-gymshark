@@ -1,0 +1,264 @@
+/* Page */
+.product {
+  padding: 80px 0;
+  background: #fff;
+}
+
+/* Layout */
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+/* ================= TOP ================= */
+.product__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.product__info {
+  max-width: 520px;
+}
+
+.product__gender {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.product__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.product__desc {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ================= FILTER ================= */
+.product__filters {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.product__filter {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+
+  &:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+  }
+}
+
+/* ACTIVE FILTER */
+.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ================= GRID ================= */
+.product__grid {
+  margin-top: 40px;
+
+  h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+/* ================= PRODUCT CARD ================= */
+.product__item {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.product__img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f4f4f4;
+  transition: 0.3s;
+}
+
+.product__item:hover .product__img {
+  transform: scale(1.05);
+}
+
+.product__content {
+  margin-top: 12px;
+}
+
+.product__name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.product__fit {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin: 4px 0;
+}
+
+.product__price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet ngang */
+@media (max-width: 1024px) {
+  .container {
+    max-width: calc(100% - 32px);
+  }
+
+  .product__title {
+    font-size: 30px;
+  }
+
+  .product__filters {
+    gap: 10px;
+  }
+
+  .product__filter {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .product__grid > div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ===== VIEW MORE ===== */
+.product__viewMore {
+  display: block; // ⭐ cho phép margin auto
+  width: fit-content; // ôm vừa nội dung
+  margin: 40px auto 0; // ⭐ căn giữa ngang + cách trên
+
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+/* Tablet dọc & Mobile */
+@media (max-width: 768px) {
+  .product {
+    padding: 50px 0;
+  }
+
+  .product__title {
+    font-size: 26px;
+  }
+
+  .product__filters {
+    scrollbar-width: none;
+  }
+
+  .product__filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product__filter {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .product__grid > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .product__name {
+    font-size: 14px;
+  }
+
+  .product__price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: calc(100% - 24px);
+  }
+
+  .product__title {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .product__desc {
+    font-size: 13px;
+  }
+
+  /* ===== FILTER 2 - 2 ===== */
+  .product__filters {
+    display: flex;
+    flex-wrap: wrap; // ⭐ cho phép rớt dòng
+    gap: 8px;
+    overflow-x: visible; // tắt scroll ngang
+  }
+
+  .product__filter {
+    flex: 1 1 calc(50% - 8px); // ⭐ 2 nút mỗi hàng
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  /* ===== GRID: sản phẩm 1 cột ===== */
+  .product__grid > div {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* CARD */
+  .product__name {
+    font-size: 13px;
+  }
+
+  .product__fit {
+    font-size: 12px;
+  }
+
+  .product__price {
+    font-size: 15px;
+  }
+}
