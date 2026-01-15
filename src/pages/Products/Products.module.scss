@@ -30,6 +30,7 @@
 }
 
 .product__gender {
+  font-family: "Anton", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -38,13 +39,15 @@
 
 .product__title {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 400;
   margin: 10px 0;
+  font-family: "Anton", sans-serif;
 }
 
 .product__desc {
   color: #666;
   line-height: 1.6;
+  font-family: "Inter", sans-serif;
 }
 
 /* ================= FILTER ================= */
@@ -84,8 +87,9 @@
   margin-top: 40px;
 
   h3 {
+    font-family: "Anton", sans-serif;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 24px;
     text-transform: uppercase;
   }

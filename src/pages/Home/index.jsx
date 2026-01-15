@@ -56,7 +56,7 @@ function Home() {
           </h1>
         </div>
       </section>
-
+      ``
       {/* WHY GYMSHARK */}
       <section className={styles.whyGymShark}>
         <div className={styles.container}>
@@ -84,8 +84,7 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Featured Products */}
+      {/* PRODUCTS */}
       <div className={styles.featuredProducts}>
         <div className={styles.container}>
           <div className={styles.featuredProductsWrapper}>

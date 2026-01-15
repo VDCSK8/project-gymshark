@@ -74,59 +74,158 @@
       left: 239px;
     }
   }
+  .whyContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    .title {
+      font-family: "Bebas Neue", sans-serif;
+      margin-bottom: 50px;
+      font-size: clamp(36px, 5vw, 60px); /* co giãn theo màn hình */
+      font-weight: 600;
+    }
+
+    .list {
+      list-style: disc;
+      margin-left: 20px;
+      margin-bottom: 30px;
+      line-height: 35px;
+
+      li {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 10px;
+        font-size: clamp(18px, 2.5vw, 30px); /* co giãn responsive */
+      }
+    }
+
+    .buttonWatch {
+      font-family: "Bebas Neue", sans-serif;
+      width: 299px;
+      height: 72px;
+
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #888888;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 44px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #555555;
+      }
+    }
+  }
 }
 
-.whyContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
+/* ========================= WHY GYMSHARK RESPONSIVE ========================= */
 
-  .title {
-    font-family: "Bebas Neue", sans-serif;
-    margin-bottom: 50px;
-    font-size: clamp(36px, 5vw, 60px); /* co giãn theo màn hình */
-    font-weight: 600;
-  }
+/* ===== Tablet 1024px ===== */
+@media (max-width: 1024px) {
+  .whyGymShark {
+    padding: 50px 0 100px 0;
 
-  .list {
-    list-style: disc;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    line-height: 35px;
+    .whyContainer {
+      grid-template-columns: 1fr 1fr;
+      gap: 100px; /* giảm gap 400px */
+    }
 
-    li {
-      font-family: "Anton", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      margin-bottom: 10px;
-      font-size: clamp(18px, 2.5vw, 30px); /* co giãn responsive */
+    .whyImage {
+      img {
+        width: 100%;
+        max-width: 380px;
+      }
+
+      .whyGymShark_2 {
+        left: 150px;
+        bottom: -60px;
+        width: 250px;
+      }
     }
   }
 
-  .buttonWatch {
-    font-family: "Bebas Neue", sans-serif;
-    width: 299px;
-    height: 72px;
+  .whyContent {
+    .title {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
 
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #888888;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 44px;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: all 0.3s ease;
+    .list li {
+      font-size: 22px;
+      line-height: 30px;
+    }
 
-    &:hover {
-      background-color: #555555;
+    .buttonWatch {
+      width: 240px;
+      height: 60px;
+      font-size: 32px;
+    }
+  }
+}
+/* ===== Tablet & Mobile 768px ===== */
+@media (max-width: 768px) {
+  .whyGymShark {
+    padding: 40px 0 80px 0;
+
+    .whyContainer {
+      grid-template-columns: 1fr; /* 1 cột */
+      gap: 40px;
+      text-align: center;
+    }
+
+    .whyImage {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 280px;
+      }
+
+      .whyGymShark_2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -40px;
+        width: 200px;
+      }
+    }
+  }
+
+  .whyContent {
+    align-items: center;
+
+    .title {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .list {
+      margin-left: 0;
+      padding-left: 0;
+      list-style-position: inside;
+
+      li {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    .buttonWatch {
+      width: 220px;
+      height: 56px;
+      font-size: 28px;
     }
   }
 }
 
-// Featured Products
+// ===================== PRODUCTS
 .featuredProducts {
   margin-bottom: 50px;
   background: #f5f5f5;
