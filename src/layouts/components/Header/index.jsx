@@ -32,11 +32,11 @@ export default function Header() {
             onClick={() => setOpen(false)}
           />
 
-          {/* MENU */}
+          {/* ĐIỀU HƯỚNG */}
           <div className={`${styles.menu} ${open ? styles.open : ""}`}>
+            {/* HOME */}
             <NavLink
               to="/"
-              end
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 isActive ? `${styles.link} ${styles.active}` : styles.link
@@ -45,6 +45,7 @@ export default function Header() {
               Home
             </NavLink>
 
+            {/* BRAND */}
             <NavLink
               to="/brands"
               onClick={() => setOpen(false)}
@@ -56,98 +57,93 @@ export default function Header() {
             </NavLink>
 
             {/* PRODUCTS */}
-            <span
-              className={`${styles.link} ${isProducts ? styles.active : ""}`}
-            >
-              Products
-            </span>
-            <div className={styles.dropdownMenu}>
-              <NavLink
-                to="/products/men"
-                end
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.subLink} ${styles.subActive}`
-                    : styles.subLink
-                }
+            <div className={styles.menuItem}>
+              <span
+                className={`${styles.link} ${isProducts ? styles.active : ""}`}
               >
-                Men
-              </NavLink>
+                Products
+              </span>
 
-              <NavLink
-                to="/products/women"
-                end
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.subLink} ${styles.subActive}`
-                    : styles.subLink
-                }
-              >
-                Women
-              </NavLink>
+              <div className={styles.dropdownMenu}>
+                <NavLink
+                  to="/products/men"
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.subLink} ${styles.subActive}`
+                      : styles.subLink
+                  }
+                >
+                  Men
+                </NavLink>
+
+                <NavLink
+                  to="/products/women"
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.subLink} ${styles.subActive}`
+                      : styles.subLink
+                  }
+                >
+                  Women
+                </NavLink>
+              </div>
             </div>
 
             {/* LOOKBOOK */}
-            <span
-              className={`${styles.link} ${isLookBook ? styles.active : ""}`}
-            >
-              LookBook
-            </span>
-
-            <div className={styles.dropdownMenu}>
-              <NavLink
-                to="/look-book/book01"
-                end
-                onClick={() => setOpen(false)} // ✅ thêm
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.subLink} ${styles.subActive}`
-                    : styles.subLink
-                }
+            <div className={styles.menuItem}>
+              <span
+                className={`${styles.link} ${isLookBook ? styles.active : ""}`}
               >
-                ONYX VER1
-              </NavLink>
+                LookBook
+              </span>
 
-              <NavLink
-                to="/look-book/book02"
-                end
-                onClick={() => setOpen(false)} // ✅ thêm
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.subLink} ${styles.subActive}`
-                    : styles.subLink
-                }
-              >
-                ONYX VER2
-              </NavLink>
+              <div className={styles.dropdownMenu}>
+                <NavLink
+                  to="/look-book/book01"
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.subLink} ${styles.subActive}`
+                      : styles.subLink
+                  }
+                >
+                  ONYX VER1
+                </NavLink>
 
-              <NavLink
-                to="/look-book/book03"
-                end
-                onClick={() => setOpen(false)} // ✅ thêm
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.subLink} ${styles.subActive}`
-                    : styles.subLink
-                }
-              >
-                ONYX VER3
-              </NavLink>
+                <NavLink
+                  to="/look-book/book02"
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.subLink} ${styles.subActive}`
+                      : styles.subLink
+                  }
+                >
+                  ONYX VER2
+                </NavLink>
 
-              <NavLink
-                to="/look-book/book04"
-                end
-                onClick={() => setOpen(false)} // ✅ thêm
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.subLink} ${styles.subActive}`
-                    : styles.subLink
-                }
-              >
-                ADAPT Seamless
-              </NavLink>
+                <NavLink
+                  to="/look-book/book03"
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.subLink} ${styles.subActive}`
+                      : styles.subLink
+                  }
+                >
+                  ONYX VER3
+                </NavLink>
+
+                <NavLink
+                  to="/look-book/book04"
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.subLink} ${styles.subActive}`
+                      : styles.subLink
+                  }
+                >
+                  ADAPT Seamless
+                </NavLink>
+              </div>
             </div>
 
             <NavLink

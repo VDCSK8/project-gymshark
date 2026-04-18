@@ -32,8 +32,13 @@ function Home() {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % banners.length);
     }, 4000);
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // dừng bộ đếm
   }, [banners.length]);
+
+  /*  useEffect là hook xử lý các tác vụ phụ sau khi component render. 
+      setInterval dùng để lặp lại một đoạn code sau mỗi khoảng thời gian cố định.
+      
+  */ 
 
   return (
     <div className={styles.home}>
@@ -84,6 +89,7 @@ function Home() {
           </div>
         </div>
       </section>
+
       {/* PRODUCTS */}
       <div className={styles.featuredProducts}>
         <div className={styles.container}>

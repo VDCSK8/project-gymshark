@@ -39,6 +39,7 @@ const PRODUCTS = {
       img: Short01,
       link: "https://www.gymshark.com/products/gymshark-gymshark-lifting-barbell-mesh-5-short-shorts-black-aw25",
     },
+
     {
       id: 2,
       name: "Training Shorts",
@@ -267,7 +268,7 @@ export default function ProductMen() {
           </div>
         </div>
 
-        {/* GRID */}
+        {/* sản phẩm */}
         <div className={styles.product__grid}>
           <h3>{CATEGORY_LABELS[category]}</h3>
 
